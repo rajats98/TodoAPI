@@ -1,6 +1,6 @@
-var express = require('express'),
-	app		= express(),
-	bodyParser = require("body-parser");
+var express 	    = require('express'),
+	app 	    = express(),
+	bodyParser  = require("body-parser");
 
 var todoRoutes = require('./routes/todos');
 
