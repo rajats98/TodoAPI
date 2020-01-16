@@ -3,7 +3,7 @@ var db = require('../models');
 exports.getTodos = function(req,res) {
 	db.Todo.find()
 	.then(function(todos) {
-		res.status(201).json(todos);
+		res.json(todos);
 	})
 	.catch(function(err) {
 		res.send(err);
@@ -13,7 +13,7 @@ exports.getTodos = function(req,res) {
 exports.createTodo = function(req,res){
 	db.Todo.create(req.body)
 	.then(function(newTodo) {
-		res.json(newTodo);
+		res.status(201).json(newTodo);
 	})
 	.catch(function(err) {
 		res.send(err);

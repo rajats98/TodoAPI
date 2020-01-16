@@ -18,9 +18,6 @@ app.get('/',function(req,res) {
 
 app.use('/api/todos', todoRoutes);
 
-
-
-
 app.listen(process.env.PORT || 5000,function(){
 	console.log("Server Started");
 });
